@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Development Guide
+    url: https://github.com/martinlutter/skills-expand-your-team-with-copilot/blob/main/docs/how-to-develop.md
+    about: Learn how to set up and develop the application
+  - name: 💬 Ask a Question
+    url: https://github.com/martinlutter/skills-expand-your-team-with-copilot/discussions
+    about: Ask questions and discuss with the community

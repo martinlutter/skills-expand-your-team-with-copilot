@@ -1,0 +1,92 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for the website
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Help us understand what you need.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What feature would you like to add?
+      description: Describe the new feature or enhancement in simple terms.
+      placeholder: "Example: We need a way to filter activities by difficulty level (Beginner, Intermediate, Advanced)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why is this feature needed?
+      description: Explain the problem this feature will solve or the benefit it will provide.
+      placeholder: "Example: Freshmen and senior students are attending the same activities, but some students need more advanced options."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: What type of feature is this?
+      description: Select the category that best describes your request.
+      options:
+        - "New filter or search option"
+        - "New information to display"
+        - "Layout or design change"
+        - "New page or section"
+        - "Performance improvement"
+        - "Accessibility improvement"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-details
+    attributes:
+      label: How should this feature work?
+      description: Provide specific details about how the feature should behave.
+      placeholder: |
+        Example:
+        - Add a "difficulty" field to each activity (Beginner, Intermediate, Advanced)
+        - If not specified, the activity is for all levels
+        - Add a filter in the left sidebar with these 3 levels plus an "All" option
+        - Only show the difficulty level on the activity card if it's specified
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this is complete?
+      description: What specific things should work when this feature is done?
+      placeholder: |
+        - Teachers can set difficulty level for each activity
+        - Students can filter activities by difficulty
+        - The filter shows correct counts for each level
+        - Activities without a level set are shown in "All" view
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions or hints (optional)
+      description: Any ideas about how to implement this, or examples from other websites?
+      placeholder: "Example: The filter should work similar to the existing category filter."
+    validations:
+      required: false
+
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Important considerations or limitations
+      description: Are there any constraints or things to keep in mind?
+      placeholder: |
+        Example:
+        - This should be optional - not all activities need a difficulty level
+        - Don't change how existing activities work if they don't have a level set
+        - Keep the interface simple for students to understand
+    validations:
+      required: false

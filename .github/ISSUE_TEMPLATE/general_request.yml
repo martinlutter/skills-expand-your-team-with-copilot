@@ -1,0 +1,78 @@
+name: General Request
+description: Request help with something that doesn't fit other categories
+title: "[Request]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if your request doesn't fit into bug reports, features, activities, or design improvements.
+
+  - type: textarea
+    id: request-description
+    attributes:
+      label: What do you need help with?
+      description: Describe your request or question in detail.
+      placeholder: "Example: Can we add a way for parents to see what activities their children are enrolled in?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request-category
+    attributes:
+      label: What type of request is this?
+      description: Choose the category that best fits your request.
+      options:
+        - "Documentation or help text"
+        - "Data or reporting"
+        - "Security or privacy"
+        - "Integration with other systems"
+        - "Student or teacher management"
+        - "General question"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background and context
+      description: Help us understand why you need this.
+      placeholder: "Example: Parents have been asking to see their student's activities, but there's currently no way to share this information with them."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: What outcome are you hoping for?
+      description: Describe what success looks like.
+      placeholder: |
+        Example:
+        - Parents can view their student's enrolled activities
+        - The information is secure and only visible to the student's parents
+        - Teachers can control what information is shared
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Important considerations
+      description: Are there any privacy, security, or other concerns to keep in mind?
+      placeholder: |
+        Example:
+        - Student information must remain private
+        - Must comply with school privacy policies
+        - Should be simple for non-technical users
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Any other details that might help?
+      placeholder: "Add any other context, examples, or information here."
+    validations:
+      required: false
