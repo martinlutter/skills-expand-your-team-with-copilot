@@ -1,0 +1,92 @@
+name: UI/Design Improvement
+description: Suggest improvements to the website's appearance or user experience
+title: "[UI]: "
+labels: ["design", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest improvements to how the website looks or how students interact with it.
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: What could be improved?
+      description: Describe what you'd like to see changed about the website's design or user experience.
+      placeholder: "Example: The activity cards are hard to read because the text is too small and there's not enough contrast."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: What would you like to see instead?
+      description: Describe your vision for the improvement.
+      placeholder: "Example: Make the text larger and use darker colors so it's easier to read. Add more spacing between cards."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-area
+    attributes:
+      label: Which area needs improvement?
+      description: Select the part of the website this affects.
+      options:
+        - "Overall color scheme"
+        - "Activity cards display"
+        - "Filters and search"
+        - "Header and navigation"
+        - "Buttons and forms"
+        - "Text size and readability"
+        - "Mobile/responsive design"
+        - "Loading and performance"
+        - "Accessibility"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Who will benefit from this improvement?
+      description: Who is this improvement for?
+      placeholder: "Example: Students with visual impairments, mobile phone users, all students, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this improvement is successful?
+      description: What specific changes should be visible?
+      placeholder: |
+        Example:
+        - Activity card text is at least 16px font size
+        - There is good contrast between text and background (WCAG AA compliant)
+        - Cards have at least 16px spacing between them
+        - Students can easily read all activity information
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or inspiration (optional)
+      description: Link to examples or provide images showing what you have in mind.
+      placeholder: "Example: Check out how [this website] handles similar information in an easy-to-read format."
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Important considerations
+      description: Are there any requirements or constraints to keep in mind?
+      placeholder: |
+        Example:
+        - Must work on both desktop and mobile devices
+        - Should maintain school branding colors
+        - Must be accessible to students with disabilities
+        - Keep it simple - students need to find activities quickly
+    validations:
+      required: false

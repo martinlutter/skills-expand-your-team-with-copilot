@@ -1,0 +1,77 @@
+name: Bug Report
+description: Report a problem or issue with the website
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible so we can fix the issue quickly.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What's wrong?
+      description: Describe the problem you're experiencing in simple terms.
+      placeholder: "Example: The website colors are blue, but our school colors are white and lime green."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe what you expected to see or what the correct behavior should be.
+      placeholder: "Example: The website should use our school colors (white and lime green) instead of blue."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the website is affected?
+      description: Select the area where you noticed the problem.
+      options:
+        - "Colors or styling (CSS)"
+        - "Activities list or display"
+        - "Filters (category, day, time)"
+        - "Student registration"
+        - "Teacher login"
+        - "Images or graphics"
+        - "Text or content"
+        - "Other or not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How to see the problem (optional)
+      description: If you know specific steps to see the issue, list them here.
+      placeholder: |
+        1. Open the website
+        2. Look at the header
+        3. Notice the color is wrong
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Add any other details, screenshots, or context about the problem.
+      placeholder: "Example: Here's a link to our official school colors guide..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know it's fixed?
+      description: What specific things should work correctly after this is fixed?
+      placeholder: |
+        - The header background should be lime green
+        - The text should be readable against the new background
+        - The buttons should match the school color scheme
+    validations:
+      required: true

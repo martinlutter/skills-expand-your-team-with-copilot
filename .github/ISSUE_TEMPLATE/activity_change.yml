@@ -1,0 +1,110 @@
+name: Activity Change Request
+description: Add, update, or remove an extracurricular activity
+title: "[Activity]: "
+labels: ["activity", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to activities (clubs, sports, etc.).
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: What type of change do you need?
+      description: Select the type of activity change.
+      options:
+        - "Add a new activity"
+        - "Update existing activity information"
+        - "Remove/cancel an activity"
+        - "Change activity schedule"
+        - "Change participant limit"
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity name
+      description: What is the name of the activity?
+      placeholder: "Example: Chess Club, Programming Class, Art Club"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity description (for new or updates)
+      description: Provide a brief description of what the activity is about.
+      placeholder: "Example: Learn strategies and compete in chess tournaments"
+    validations:
+      required: false
+
+  - type: textarea
+    id: schedule-details
+    attributes:
+      label: Schedule information (for new or updates)
+      description: Specify when the activity meets.
+      placeholder: |
+        Example:
+        Days: Mondays and Fridays
+        Time: 3:15 PM - 4:45 PM
+        Location: Room 204
+    validations:
+      required: false
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum number of participants (for new or updates)
+      description: How many students can join this activity?
+      placeholder: "Example: 20"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category (for new activities)
+      description: What type of activity is this?
+      options:
+        - "Sports"
+        - "Arts"
+        - "Academic"
+        - "Community"
+        - "Technology"
+        - "Other"
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for this change
+      description: Why is this change needed?
+      placeholder: "Example: Many students have requested an advanced chess club, and we have a teacher volunteer ready to lead it."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this is complete?
+      description: What should be true after this change is made?
+      placeholder: |
+        Example:
+        - New activity appears in the activities list
+        - Students can see the schedule and sign up
+        - The activity shows up in the correct category filter
+        - Maximum participant limit is enforced
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information (optional)
+      description: Any other details we should know?
+      placeholder: "Example: This activity should only be visible to students in grades 10-12."
+    validations:
+      required: false
